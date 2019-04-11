@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <script>
+        function register() {
+            window.location.href = "/user/registerPage"
+        }
+    </script>
+    <title>区域医疗平台--用户登录</title>
+
+    <!--<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">-->
+
+    <link href="asserts/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.css}" rel="stylesheet">
+
+    <link href="asserts/css/signin.css" th:href="@{/asserts/css/signin.css}" rel="stylesheet">
+</head>
+<body class="text-center">
+<form action="/user/userLogin" method="post" class="form-signin">
+    <img class="mb-4" src="assets/img/bootstrap-solid.svg" th:src="@{/asserts/img/bootstrap-solid.svg}" alt=""
+         width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <input type="text" name="username" class="form-control" placeholder="ID Card Number" required>
+    <input type="password" name="password" class="form-control" placeholder="Password" required>
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" value="remember-me"> Remember Me
+        </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <button class="btn btn-lg btn-primary btn-block" type="button" onclick=javascrtpt:register()>Register</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
+</form>
+</body>
+</html>

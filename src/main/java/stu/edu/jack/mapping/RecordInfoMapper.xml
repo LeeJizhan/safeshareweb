@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="stu.edu.jack.mapper.RecordInfoMapper">
+
+    <select id="getPaperNameAndTime" parameterType="RecordInfo" resultType="RecordInfo">
+    SELECT record_info.recordname,record_info.intime FROM record_info ,userandrecord where record_info.recordid = userandrecord.recordid and userandrecord.idcardnum = #{idCardNum}
+  </select>
+
+</mapper>

@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+spring:
+    datasource:
+        name: safeshare
+        url: jdbc:mysql://127.0.0.1:3306/safeshare?characterEncoding=utf8&serverTimezone=UTC
+        username: root
+        password: Lee640196g
+        driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:stu/edu/jack/mapping/*.xml
+  type-aliases-package: stu.edu.jack.entity

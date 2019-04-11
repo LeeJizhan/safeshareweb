@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>区域医疗平台--用户注册</title>
+</head>
+
+<link href="asserts/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.css}" rel="stylesheet">
+
+<link href="asserts/css/signin.css" th:href="@{/asserts/css/register.css}" rel="stylesheet">
+<body>
+    <form action="/user/register" method="post" class="form-register">
+        <input type="text" name="username" class="form-control" placeholder="请输入用户名" required/>
+        <input type="number" name="idCardNumber" class="form-control" placeholder="请输入身份证号码" required/>
+        <input type="text" name="realName" class="form-control" placeholder="请输入真实姓名" required/>
+        <input type="number" name="phoneNumber" class="form-control" placeholder="请输入手机号码" required/>
+        <input type="number" name="checkNumber" class="form-control" placeholder="请输入验证码" required/>
+        <input type="password" name="password" class="form-control" placeholder="请输入密码" required/>
+        <input type="password" name="password2" class="form-control" placeholder="请输入确认密码" required/>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+    </form>
+</body>
+</html>
